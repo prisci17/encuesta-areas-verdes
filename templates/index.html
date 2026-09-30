@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Encuesta sobre las áreas verdes del colegio técnico.">
+  <title>Encuesta de áreas verdes |</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="#inicio" aria-label="Inicio de la encuesta">
+        <span class="brand-mark" aria-hidden="true">+</span>
+        <span>IPETyM N°69<br><strong>Encuesta escolar</strong></span>
+      </a>
+      <div class="header-meta"><span class="status-dot"></span> Participación abierta</div>
+    </header>
+
+    <main id="inicio">
+      <section class="intro" aria-labelledby="page-title">
+        <div class="intro-copy">
+          <p class="eyebrow">Comunidad · Espacios que enseñan</p>
+          <h1 id="page-title">Hagamos crecer<br><em>nuestro colegio.</em></h1>
+          <p class="intro-text">Queremos conocer tu mirada sobre las áreas verdes del IPETyM N°69 para convertir tus ideas en acciones concretas.</p>
+          <div class="intro-details">
+            <span><strong>24</strong> preguntas</span>
+            <span><strong>2 min</strong> de respuesta</span>
+            <span><strong>Anónima</strong> y confidencial</span>
+          </div>
+        </div>
+        <div class="leaf-illustration" aria-hidden="true">
+          <div class="sun"></div>
+          <div class="plant plant-left"><i></i><i></i><b></b></div>
+          <div class="plant plant-right"><i></i><i></i><i></i><b></b></div>
+          <div class="ground-line"></div>
+          <span class="illustration-label">01 / 21</span>
+        </div>
+      </section>
+
+      <section class="survey-area" aria-label="Formulario de encuesta">
+        <div class="survey-heading">
+          <div>
+            <p class="eyebrow">Tu opinión cuenta</p>
+            <h2>Cuéntanos... ¿cómo lo ves?</h2>
+            <p class="survey-intro">Esta encuesta busca conocer cómo vivimos y cuidamos las áreas verdes del IPETyM N°69. Responde las preguntas con sinceridad; tus ideas nos ayudarán a construir espacios más saludables y agradables.</p>
+          </div>
+          <div class="progress-wrap" aria-label="Progreso de la encuesta">
+            <span id="progress-text">0 de 22 respondidas</span>
+            <div class="progress-track"><div id="progress-bar"></div></div>
+          </div>
+        </div>
+
+        <form id="survey-form" novalidate>
+          <div class="question-list">
+            <fieldset class="question-card" data-question="1">
+              <legend><span>01</span> ¿Qué es un área verde para vos?</legend>
+              <div class="choice-row">
+                <label class="choice"><input type="radio" name="q1" value="Un espacio con plantas y naturaleza"><span class="choice-face">Un espacio con plantas y naturaleza</span></label>
+                <label class="choice"><input type="radio" name="q1" value="Un lugar para recrearse"><span class="choice-face">Un lugar para recrearse</span></label>
+                <label class="choice"><input type="radio" name="q1" value="Un lugar donde las plantas tienen su propio territorio"><span class="choice-face">Donde hay pasto</span></label>
+                <label class="choice"><input type="radio" name="q1" value="Un lugar donde las plantas tienen su propio territorio"><span class="choice-face">ni idea que es</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="question-card" data-question="2">
+              <legend><span>02</span> ¿Hay áreas verdes en el colegio?</legend>
+              <div class="choice-row">
+                <label class="choice"><input type="radio" name="q2" value="Sí"><span class="choice-face">Sí</span></label>
+                <label class="choice"><input type="radio" name="q2" value="No"><span class="choice-face">No</span></label>
+                <label class="choice"><input type="radio" name="q2" value="No sé"><span class="choice-face">No sé</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="question-card" data-question="3">
+              <legend><span>03</span> ¿Consideras que el colegio cuenta con suficientes áreas verdes?</legend>
+              <div class="choice-row">
+                <label class="choice"><input type="radio" name="q3" value="Sí"><span class="choice-face">Sí</span></label>
+                <label class="choice"><input type="radio" name="q3" value="No"><span class="choice-face">No</span></label>
+                <label class="choice"><input type="radio" name="q3" value="Ni idea"><span class="choice-face">Ni idea</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="question-card" data-question="4">
+              <legend><span>04</span> ¿Las áreas verdes actuales se encuentran bien cuidadas?</legend>
+              <div class="choice-row">
+                <label class="choice"><input type="radio" name="q4" value="Sí"><span class="choice-face">Sí</span></label>
+                <label class="choice"><input type="radio" name="q4" value="No"><span class="choice-face">No</span></label>
+                <label class="choice"><input type="radio" name="q4" value="No sé"><span class="choice-face">No sé</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="question-card" data-question="5">
+              <legend><span>05</span> ¿Te gustaría que hubiera más árboles dentro del colegio?</legend>
+              <div class="choice-row">
+                <label class="choice"><input type="radio" name="q5" value="Sí"><span class="choice-face">Sí</span></label>
+                <label class="choice"><input type="radio" name="q5" value="No"><span class="choice-face">No</span></label>
+                <label class="choice"><input type="radio" name="q5" value="Me da igual"><span class="choice-face">me da igual</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="question-card" data-question="6">
+              <legend><span>06</span> ¿Crees que las plantas aportan suficiente sombra durante los recreos?</legend>
+              <div class="choice-row">
+                <label class="choice"><input type="radio" name="q6" value="Sí"><span class="choice-face">Sí</span></label>
+                <label class="choice"><input type="radio" name="q6" value="No"><span class="choice-face">No</span></label>
+                <label class="choice"><input type="radio" name="q6" value="Hay poca sombra"><span class="choice-face">ni salgo</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="question-card" data-question="7">
+              <legend><span>07</span> ¿Utilizas las áreas verdes para descansar o compartir con tus compañeros?</legend>
+              <div class="choice-row">
+                <label class="choice"><input type="radio" name="q7" value="Sí, frecuentemente"><span class="choice-face">Sí</span></label>
+                <label class="choice"><input type="radio" name="q7" value="A veces"><span class="choice-face">No</span></label>
+                <label class="choice"><input type="radio" name="q7" value="No"><span class="choice-face">me caen todos mal</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="question-card" data-question="8">
+              <legend><span>08</span> ¿Consideras que hay suficientes basureros en el colegio?</legend>
+              <div class="choice-row">
+                <label class="choice"><input type="radio" name="q8" value="Sí"><span class="choice-face">Sí</span></label>
+                <label class="choice"><input type="radio" name="q8" value="No"><span class="choice-face">No</span></label>
+                <label class="choice"><input type="radio" name="q8" value="Hay, pero faltan en algunos lugares"><span class="choice-face">Hay, pero faltan en algunos lugares</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="question-card" data-question="9">
+              <legend><span>09</span> ¿Conoces sobre la separación de residuos?</legend>
+              <div class="choice-row">
+                <label class="choice"><input type="radio" name="q9" value="Sí, bastante"><span class="choice-face">Sí</span></label>
+                <label class="choice"><input type="radio" name="q9" value="Algo"><span class="choice-face">No</span></label>
+                <label class="choice"><input type="radio" name="q9" value="No"><span class="choice-face">Algo</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="question-card" data-question="10">
+  <legend>
+    <span>10</span> ¿En qué medida creés que las áreas verdes mejoran el ambiente para aprender?
+  </legend>
+
+  <div class="scale-row">
+    <label class="scale-option">
+      <input type="radio" name="q10" value="1 - Poco">
+      <span class="choice-face">1 · Poco</span>
+    </label>
+
+    <label class="scale-option">
+      <input type="radio" name="q10" value="2 - Regular">
+      <span class="choice-face">2 · Regular</span>
+    </label>
+
+    <label class="scale-option">
+      <input type="radio" name="q10" value="3 - Más o menos">
+      <span class="choice-face">3 · Más o menos</span>
+    </label>
+
+    <label class="scale-option">
+      <input type="radio" name="q10" value="4 - Bastante">
+      <span class="choice-face">4 · Bastante</span>
+    </label>
+
+    <label class="scale-option">
+      <input type="radio" name="q10" value="5 - Mucho">
+      <span class="choice-face">5 · Mucho</span>
+    </label>
+  </div>
+</fieldset>
+
+            <fieldset class="question-card" data-question="11">
+              <legend><span>11</span> ¿Consideras importante incorporar plantas nativas en el colegio?</legend>
+              <div class="choice-row">
+                <label class="choice"><input type="radio" name="q11" value="Sí"><span class="choice-face">Sí</span></label>
+                <label class="choice"><input type="radio" name="q11" value="No"><span class="choice-face">No</span></label>
+                <label class="choice"><input type="radio" name="q11" value="No sé"><span class="choice-face">No sé</span></label>
+              </div>
+            </fieldset>
+<fieldset class="question-card" data-question="13">
+              <legend><span>13</span> ¿Hay suficiente información visible sobre cómo cuidar las plantas?</legend>
+              <div class="choice-row">
+                <label class="choice"><input type="radio" name="q13" value="Sí"><span class="choice-face">Sí</span></label>
+                <label class="choice"><input type="radio" name="q13" value="No"><span class="choice-face">No</span></label>
+                <label class="choice"><input type="radio" name="q13" value="Hay poca información"><span class="choice-face">Hay poca información</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="question-card" data-question="14">
+              <legend><span>14</span> ¿Crees que el cuidado de estos espacios debería ser responsabilidad de todos?</legend>
+              <div class="choice-row">
+                <label class="choice"><input type="radio" name="q14" value="Sí"><span class="choice-face">Sí</span></label>
+                <label class="choice"><input type="radio" name="q14" value="No"><span class="choice-face">No</span></label>
+                <label class="choice"><input type="radio" name="q14" value="Depende de cada sector"><span class="choice-face">No me interesa
+                </span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="question-card" data-question="15">
+              <legend><span>15</span> ¿Te involucrarías en el cuidado y mantenimiento de las áreas verdes?</legend>
+              <div class="choice-row">
+                <label class="choice"><input type="radio" name="q15" value="Sí"><span class="choice-face">Sí</span></label>
+                <label class="choice"><input type="radio" name="q15" value="Tal vez"><span class="choice-face">Tal vez</span></label>
+                <label class="choice"><input type="radio" name="q15" value="No"><span class="choice-face">No</span></label>
+              </div>
+            </fieldset>
+
+            <div class="recommendation-card text-answer-card" data-question="16">
+              <label for="activities"><span class="number-badge">16</span><span><strong>Tu idea</strong><small>¿Qué actividades te gustaría que hagan para ayudar a mejorar las áreas verdes?</small></span></label>
+              <textarea id="activities" name="q16" rows="4" maxlength="500" placeholder="Escribí qué actividades te gustaría que se hagan..."></textarea>
+              <div class="field-footer"><span>Contanos tu idea, incluso si es medio loca pero útil</span><span id="activities-char-count">0 / 500</span></div>
+            </div>
+
+            <fieldset class="question-card" data-question="17">
+              <legend><span>17</span> ¿Te gustaría contar con un huerto escolar para aprender haciendo?</legend>
+              <div class="choice-row">
+                <label class="choice"><input type="radio" name="q17" value="Sí"><span class="choice-face">Sí</span></label>
+                <label class="choice"><input type="radio" name="q17" value="Tal vez"><span class="choice-face">Tal vez</span></label>
+                <label class="choice"><input type="radio" name="q17" value="No"><span class="choice-face">No</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="question-card" data-question="18">
+              <legend><span>18</span> ¿Consideras que mejorar las áreas verdes beneficiaría a toda la comunidad educativa?</legend>
+              <div class="choice-row">
+                <label class="choice"><input type="radio" name="q18" value="Sí"><span class="choice-face">Sí</span></label>
+                <label class="choice"><input type="radio" name="q18" value="No"><span class="choice-face">No</span></label>
+                <label class="choice"><input type="radio" name="q18" value="No estoy seguro/a"><span class="choice-face">No se</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="question-card" data-question="19">
+              <legend><span>19</span> ¿Apoyarías un proyecto permanente de áreas verdes en el colegio?</legend>
+              <div class="choice-row">
+                <label class="choice"><input type="radio" name="q19" value="Sí"><span class="choice-face">Sí</span></label>
+                <label class="choice"><input type="radio" name="q19" value="Tal vez"><span class="choice-face">Tal vez</span></label>
+                <label class="choice"><input type="radio" name="q19" value="No"><span class="choice-face">No</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="question-card" data-question="20">
+              <legend><span>20</span> ¿Qué acción te parece más importante para mejorar las áreas verdes?</legend>
+              <div class="choice-row">
+                <label class="choice"><input type="radio" name="q20" value="Plantar más árboles y plantas"><span class="choice-face">Plantar más</span></label>
+                <label class="choice"><input type="radio" name="q20" value="Colocar más basureros"><span class="choice-face">Más basureros</span></label>
+                <label class="choice"><input type="radio" name="q20" value="Cuidar y mantener los espacios"><span class="choice-face">Cuidar y mantener</span></label>
+                <label class="choice"><input type="radio" name="q20" value="Separar residuos"><span class="choice-face">Separar residuos</span></label>
+              </div>
+            </fieldset>
+
+            <div class="recommendation-card" data-question="21">
+              <label for="recommendations"><span class="number-badge">21</span><span><strong>Tu propuesta</strong><small>¿Qué recomendación darías para mejorar las áreas verdes?</small></span></label>
+              <textarea id="recommendations" name="recommendations" rows="5" maxlength="500" placeholder="Escribe aquí tu idea, proyecto o mejora..."></textarea>
+              <div class="field-footer"><span>Opcional, pero muy valioso</span><span id="char-count">0 / 500</span></div>
+            </div>
+
+              <div class="recommendation-card text-answer-card" data-question="22">
+              <label for="materials"><span class="number-badge">22</span><span><strong>Tu aporte</strong><small>¿Qué materiales podrías aportar para ayudar en las áreas verdes?</small></span></label>
+              <textarea id="materials" name="q22" rows="4" maxlength="500" placeholder="Por ejemplo: plantas, semillas, macetas, tierra, herramientas, materiales reciclables..."></textarea>
+              <div class="field-footer"><span>Podés escribir lo que tengas disponible</span><span id="materials-char-count">0 / 500</span></div>
+            </div>
+          </div>
+
+            <fieldset class="question-card" data-question="23">
+              <legend><span>23</span> ¿Conocés algunas plantas nativas de nuestra ciudad?</legend>
+              <div class="choice-row">
+                <label class="choice"><input type="radio" name="q23" value="Sí, conozco algunas"><span class="choice-face">Sí, conozco algunas</span></label>
+                <label class="choice"><input type="radio" name="q23" value="Conozco algunas, pero no muchas"><span class="choice-face">Conozco algunas, pero no muchas</span></label>
+                <label class="choice"><input type="radio" name="q23" value="No"><span class="choice-face">No</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="question-card" data-question="24">
+              <legend><span>24</span> ¿Sabés si existe alguna regulación sobre la plantación de árboles en nuestra ciudad?</legend>
+              <div class="choice-row">
+                <label class="choice"><input type="radio" name="q24" value="Sí"><span class="choice-face">Sí</span></label>
+                <label class="choice"><input type="radio" name="q24" value="No"><span class="choice-face">No</span></label>
+                <label class="choice"><input type="radio" name="q24" value="No sé"><span class="choice-face">No sé</span></label>
+              </div>
+            </fieldset>
+
+          <div class="form-actions">
+            <p id="form-message" class="form-message" role="status"></p>
+            <button class="submit-button" type="submit"><span>Enviar respuestas</span><span class="button-arrow" aria-hidden="true">↗</span></button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer"><span>Proyecto de participación escolar</span><span>Áreas verdes · 2026</span></footer>
+  </div>
+  <div class="success-modal" id="success-modal" role="dialog" aria-modal="true" aria-labelledby="success-title" hidden>
+    <div class="modal-backdrop"></div>
+    <div class="modal-content"><div class="success-icon" aria-hidden="true">✓</div><p class="eyebrow">Respuesta recibida</p><h2 id="success-title">Gracias por sumar tu voz.</h2><p>Tu opinión ayudará a imaginar espacios más vivos, frescos y útiles para todo el establecimiento.</p><button class="submit-button" id="close-modal" type="button"><span>Volver a la encuesta</span><span class="button-arrow" aria-hidden="true">↗</span></button></div>
+  </div>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
